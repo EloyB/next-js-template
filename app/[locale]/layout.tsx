@@ -1,3 +1,4 @@
+import CookieConsent from "@/components/global/cookie-consent";
 import "./globals.css";
 
 export default function LocaleLayout({
@@ -9,7 +10,10 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }
