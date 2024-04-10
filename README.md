@@ -59,6 +59,23 @@ To make things easier we use **shadcn/ui** UI as a UI library. This pre-built li
 
 More info on the use of the components and some examples can be found [here](https://ui.shadcn.com)
 
+## Translations
+
+The template is set up with all the basics to start using translations for your pages.
+
+### Add a new language
+
+1. Find the `locales` folder in de root
+2. Create a dedicated json file for your language you want to add (ex. `en.json`)
+3. Start adding the translation keys you need (keep yourself to the convention of using uppercase letters as the key => **'KEY': 'value'**)
+
+**IMPORTANT:** Keep in mind that all the json files for your languages should have the same translation keys. If not, certain things will not be translated correctly for some languages.
+
+### Using the language keys in your page content
+
+1. Create a constant with the `useTranslation` hook (`const t = useTranslation()`)
+2. Inside of your html-tag just use the following syntax => `{t('KEY')}`
+
 ## Getting Started
 
 First, run the development server:
